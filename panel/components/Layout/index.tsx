@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
 
         <Menu.Nav>
           <Menu.NavItem href='/' Icon={MdHome}>
-            teste
+            Home
           </Menu.NavItem>
           <Menu.NavItem href='/categories' Icon={MdLabel}>
             Categorias

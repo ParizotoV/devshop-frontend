@@ -1,10 +1,25 @@
 import React from 'react'
+
 import Card from '../components/Card'
 import Layout from '../components/Layout'
 import Table from '../components/Table'
 import Title from '../components/Title'
+import { useQuery } from '../lib/graphql'
 
-const Index: React.FC = () => {
+const query = {
+  query: `
+    query {
+      getAllCategories {
+        id
+        name
+        slug
+      }
+    }
+  `
+}
+
+const Categories: React.FC = () => {
+  const {} = useQuery(query)
   return (
     <Layout>
       <Title>Devshop - Gerenciar categorias</Title>
@@ -175,4 +190,4 @@ const Index: React.FC = () => {
   )
 }
 
-export default Index
+export default Categories
